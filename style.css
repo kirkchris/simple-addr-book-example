@@ -1,0 +1,101 @@
+html, BODY { font-family: "Calibri", Verdana, Arial;
+	color: #3350ae;
+   padding:10;
+   margin: 10;
+   text-align: left;
+   height: 100%;
+   width: 1000px;
+}
+
+#container {
+	width: 1000px;
+	position: relative;
+	
+}
+
+#header {
+	width: 1000px;
+	position: relative;
+	height: 250px;
+}
+
+#search {
+	position: relative;
+	text-align: right;
+	top: 30px;
+	vertical-align: bottom;
+}
+
+#logo {
+	position: relative;
+	text-align: left;
+	top: -30px;
+	left: 0px;
+	float: left;
+}
+
+#menu {
+	position: relative;
+	top: 30px;
+	left: 20px;
+	float: left;
+}
+
+#page {
+	position: relative;
+	top: -50px;
+	width: 800px;
+	margin-left: 100px;
+	margin-right: 80px;
+}
+
+.inputreg {
+	background-color: #d9e2ff;
+	border: solid 1px #3350ae;
+	font-family: "Calibri", Verdana, Arial;
+	font-size: 14px;
+	padding: 6px;
+}
+
+a, a:active {
+	color: #3350ae;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #3350ae;
+	text-decoration: underline;
+}
+
+.bottom {
+	font-size: 14px;
+}
+
+/*CSS FOR SUGGEST DIV STARTS HERE*/
+#suggest_div ul {
+	margin: 5px;
+	padding-left: 0;
+	list-style-type: none;
+	border-top: 1px solid #3350ae;
+	font-family: "Calibri", Arial, Helvetica, sans-serif;
+}
+
+#suggest_div a {
+	display: block;
+	padding: 3px;
+/*	background-color: #036;*/
+	background-color: #d9e2ff;
+	border-bottom: 1px solid #3350ae;
+}
+
+#suggest_div a:link, #suggest_div a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+#suggest_div a:hover {
+/*	background-color: #369;*/
+	background-color: #514C65;
+	color: #EEE;
+}
+/*CSS FOR SUGGEST DIV ENDS HERE*/

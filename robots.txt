@@ -1,0 +1,3 @@
+Sitemap: http://www.teckfusion.com/ampush/sitemap.xml
+User-agent: *
+Disallow: 

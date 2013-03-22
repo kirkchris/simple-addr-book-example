@@ -1,0 +1,89 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.8.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Mar 09, 2010 at 08:21 AM
+-- Server version: 5.0.81
+-- PHP Version: 5.2.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `ampush_main`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `error_log`
+--
+
+CREATE TABLE `error_log` (
+  `error_id` int(10) NOT NULL auto_increment,
+  `title` varchar(75) NOT NULL,
+  `msg` varchar(255) NOT NULL,
+  `time` int(10) NOT NULL,
+  `ip` varchar(20) NOT NULL,
+  `page` varchar(200) NOT NULL,
+  PRIMARY KEY  (`error_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `listings`
+--
+
+CREATE TABLE `listings` (
+  `id` bigint(14) NOT NULL auto_increment,
+  `userID` int(10) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `firstname` varchar(70) NOT NULL,
+  `lastname` varchar(70) NOT NULL,
+  `street` varchar(250) NOT NULL,
+  `city` varchar(75) NOT NULL,
+  `zip` mediumint(5) NOT NULL,
+  `state` varchar(2) NOT NULL,
+  `cellphone` varchar(15) NOT NULL,
+  `homephone` varchar(15) NOT NULL,
+  `email` varchar(75) NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `userID` (`userID`),
+  KEY `name` (`name`),
+  KEY `firstname` (`firstname`),
+  KEY `lastname` (`lastname`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) NOT NULL auto_increment,
+  `username` varchar(40) NOT NULL,
+  `password` varchar(75) NOT NULL,
+  `name` varchar(65) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `lastmove` int(10) NOT NULL,
+  `regdate` int(10) NOT NULL,
+  `birthday` int(10) NOT NULL,
+  `corporation` varchar(65) NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `username` (`username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_branding`
+--
+
+CREATE TABLE `user_branding` (
+  `userID` int(10) NOT NULL,
+  `logo` varchar(255) NOT NULL,
+  `font` enum('Calibri','Arial','Helvetica','Verdana','Comic Sans MS','Impact','Tahoma','Palatino Linotype') NOT NULL default 'Calibri',
+  PRIMARY KEY  (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
